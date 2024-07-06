@@ -23,7 +23,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt-get install -y tuxedo-backlight-control
+        sudo apt-get install -y python3 python3-pip
+        pip3 install -r requirements.txt
 
     - name: Build RPM package
       run: |
