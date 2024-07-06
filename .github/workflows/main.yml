@@ -30,6 +30,7 @@ jobs:
       run: |
         mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
         cp tuxedo-backlight-control.spec ~/rpmbuild/SPECS/
+        tar -czvf ~/rpmbuild/SOURCES/tuxedo-backlight-control.tar.gz *
         rpmbuild -ba ~/rpmbuild/SPECS/tuxedo-backlight-control.spec
 
     - name: Upload RPM package
